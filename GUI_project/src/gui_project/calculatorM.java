@@ -65,8 +65,10 @@ public class calculatorM extends javax.swing.JFrame {
         setTitle("Calculator");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(500, 250));
-        setMinimumSize(new java.awt.Dimension(350, 580));
-        setPreferredSize(new java.awt.Dimension(400, 500));
+        setMaximumSize(new java.awt.Dimension(290, 560));
+        setMinimumSize(new java.awt.Dimension(290, 560));
+        setPreferredSize(new java.awt.Dimension(360, 500));
+        setResizable(false);
         setType(java.awt.Window.Type.UTILITY);
 
         jPanel7.setBackground(new java.awt.Color(0, 0, 0));
