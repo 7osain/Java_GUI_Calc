@@ -15,12 +15,16 @@ public class Calc extends javax.swing.JFrame {
      */
     public Calc() {
         initComponents();
+        disable();
+        
+        
     }
 public void disable()
 {
     DigTxt.setEnabled(false);
     jRadioButton1.setEnabled(true); // ON button Enable
     jRadioButton3.setEnabled(false); // OFF button Disable
+    jRadioButton3.setSelected(false);
     
     Zero.setEnabled(false);
     One.setEnabled(false);
@@ -45,10 +49,11 @@ public void disable()
     Equal.setEnabled(false);
 }
 public void enable(){
-    DigTxt.setEnabled(false);
+    DigTxt.setEnabled(true);
     
     jRadioButton1.setEnabled(false); // ON button disabled
     jRadioButton3.setEnabled(true);   // OFF button Enabled
+   
     
     Zero.setEnabled(true);
     One.setEnabled(true);
@@ -140,13 +145,12 @@ public void arithmetic_operation()
         setTitle("Calculator");
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(0, 51, 204));
-        getContentPane().setLayout(new java.awt.GridLayout());
+        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
         One.setBackground(new java.awt.Color(204, 204, 204));
         One.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        One.setForeground(new java.awt.Color(0, 0, 0));
         One.setText("1");
         One.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,7 +160,6 @@ public void arithmetic_operation()
 
         Multiplication.setBackground(new java.awt.Color(255, 204, 0));
         Multiplication.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Multiplication.setForeground(new java.awt.Color(0, 0, 0));
         Multiplication.setText("X");
         Multiplication.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,7 +169,6 @@ public void arithmetic_operation()
 
         Two.setBackground(new java.awt.Color(204, 204, 204));
         Two.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Two.setForeground(new java.awt.Color(0, 0, 0));
         Two.setText("2");
         Two.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,7 +178,6 @@ public void arithmetic_operation()
 
         Division.setBackground(new java.awt.Color(255, 204, 0));
         Division.setFont(new java.awt.Font("DecoType Thuluth", 1, 14)); // NOI18N
-        Division.setForeground(new java.awt.Color(0, 0, 0));
         Division.setText("/");
         Division.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,7 +187,6 @@ public void arithmetic_operation()
 
         Three.setBackground(new java.awt.Color(204, 204, 204));
         Three.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Three.setForeground(new java.awt.Color(0, 0, 0));
         Three.setText("3");
         Three.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,7 +196,6 @@ public void arithmetic_operation()
 
         Equal.setBackground(new java.awt.Color(255, 204, 0));
         Equal.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Equal.setForeground(new java.awt.Color(0, 0, 0));
         Equal.setText("=");
         Equal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,7 +205,6 @@ public void arithmetic_operation()
 
         Four.setBackground(new java.awt.Color(204, 204, 204));
         Four.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Four.setForeground(new java.awt.Color(0, 0, 0));
         Four.setText("4");
         Four.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,7 +214,6 @@ public void arithmetic_operation()
 
         Point.setBackground(new java.awt.Color(204, 204, 204));
         Point.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Point.setForeground(new java.awt.Color(0, 0, 0));
         Point.setText(".");
         Point.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -226,7 +223,6 @@ public void arithmetic_operation()
 
         Five.setBackground(new java.awt.Color(204, 204, 204));
         Five.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Five.setForeground(new java.awt.Color(0, 0, 0));
         Five.setText("5");
         Five.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -236,7 +232,6 @@ public void arithmetic_operation()
 
         Sqrt.setBackground(new java.awt.Color(204, 204, 204));
         Sqrt.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Sqrt.setForeground(new java.awt.Color(0, 0, 0));
         Sqrt.setText("√");
         Sqrt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -246,7 +241,6 @@ public void arithmetic_operation()
 
         Six.setBackground(new java.awt.Color(204, 204, 204));
         Six.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Six.setForeground(new java.awt.Color(0, 0, 0));
         Six.setText("6");
         Six.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -256,7 +250,6 @@ public void arithmetic_operation()
 
         Square.setBackground(new java.awt.Color(204, 204, 204));
         Square.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        Square.setForeground(new java.awt.Color(0, 0, 0));
         Square.setText("x^2");
         Square.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -266,7 +259,6 @@ public void arithmetic_operation()
 
         Seven.setBackground(new java.awt.Color(204, 204, 204));
         Seven.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Seven.setForeground(new java.awt.Color(0, 0, 0));
         Seven.setText("7");
         Seven.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -276,7 +268,6 @@ public void arithmetic_operation()
 
         OverX.setBackground(new java.awt.Color(204, 204, 204));
         OverX.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        OverX.setForeground(new java.awt.Color(0, 0, 0));
         OverX.setText("1/x");
         OverX.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -286,7 +277,6 @@ public void arithmetic_operation()
 
         Eight.setBackground(new java.awt.Color(204, 204, 204));
         Eight.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Eight.setForeground(new java.awt.Color(0, 0, 0));
         Eight.setText("8");
         Eight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -306,7 +296,6 @@ public void arithmetic_operation()
 
         Nine.setBackground(new java.awt.Color(204, 204, 204));
         Nine.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Nine.setForeground(new java.awt.Color(0, 0, 0));
         Nine.setText("9");
         Nine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -326,7 +315,6 @@ public void arithmetic_operation()
 
         Plus.setBackground(new java.awt.Color(255, 204, 0));
         Plus.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Plus.setForeground(new java.awt.Color(0, 0, 0));
         Plus.setText("+");
         Plus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -350,7 +338,6 @@ public void arithmetic_operation()
 
         Zero.setBackground(new java.awt.Color(204, 204, 204));
         Zero.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Zero.setForeground(new java.awt.Color(0, 0, 0));
         Zero.setText("0");
         Zero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -360,7 +347,6 @@ public void arithmetic_operation()
 
         Minus.setBackground(new java.awt.Color(255, 204, 0));
         Minus.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Minus.setForeground(new java.awt.Color(0, 0, 0));
         Minus.setText("-");
         Minus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -377,7 +363,6 @@ public void arithmetic_operation()
             }
         });
 
-        DigTxt.setBackground(new java.awt.Color(255, 255, 255));
         DigTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DigTxtActionPerformed(evt);
@@ -462,7 +447,7 @@ public void arithmetic_operation()
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(DigTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -486,7 +471,7 @@ public void arithmetic_operation()
                     .addComponent(Eight, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Nine, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Multiplication, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Five, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Four, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -539,7 +524,7 @@ public void arithmetic_operation()
     }//GEN-LAST:event_ZeroActionPerformed
 
     private void jRadioButton1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jRadioButton1PropertyChange
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jRadioButton1PropertyChange
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
